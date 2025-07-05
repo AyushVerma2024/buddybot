@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 110vh;
+    font-family: 'Outfit';
+    background: linear-gradient(rgb(255, 255, 255),#45caff);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    background: linear-gradient(45deg, #ff7f50, #6a5acd);
+    transition: background 0.4s ease;
+  }
+  
+  nav:hover {
+    background: linear-gradient(45deg, #6a5acd, #ff7f50);
+  }
+  
+  .nav-link {
+    position: relative;
+    color: #fff !important;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #ff7f50 !important;
+    transform: translateY(-5px);
+  }
+  
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff7f50;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .navbar-toggler {
+    border-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-toggler:hover {
+    transform: rotate(90deg);
+  }
+  
+  @media (max-width:800px) {
+    .contact-inputs{
+        width: 80vw;
+    }
+    .contact-right{
+        display: none;
+    }  
+}
+.snowflake {
+  position:fixed;
+  top: -50px; /* Start above the viewport */
+  color: #fff;
+  font-size: 24px; /* Snowflake size */
+  animation: fall 10s linear infinite, sway 3s ease-in-out infinite; /* Falling and swaying */
+}
+
+/* Falling animation */
+@keyframes fall {
+  to {
+      top: 660px; /* End at the bottom of the viewport */
+  }
+}
+@keyframes sway {
+  0%, 100% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(40px); /* Slight horizontal movement */
+  }
+}
+.chat-container {
+    width: 700px;
+    background: linear-gradient(#ff7f50,#6a5acd);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 15px 18px rgba(0, 0, 0, 0.943);
+    border: #fffdfd;
+    opacity: 80%;
+    align-items: center;
+    margin-left: 400px;
+    padding-bottom: 20px;
+}
+
+#chat-box {
+    height: 100px;
+    overflow-y: auto;
+    border-bottom: 1px solid #c3c3c3;
+    margin-bottom: 10px;
+}
+
+#user-input {
+    width: 100%;
+    padding: 10px;
+    color: #020202;
+}
+.about-us {
+    color: #020202;
+    text-align: center;
+    padding-top: 9px;
+    text-shadow: #ffffff;
+}
+
